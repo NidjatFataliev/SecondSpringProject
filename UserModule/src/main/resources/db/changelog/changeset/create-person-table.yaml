@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: changeColumnPerson
+      author: Nidjat
+      changes:
+        - createTable:
+            tableName: testpersons
+            columns:
+            - column:
+                name: id
+                type: SERIAL
+                autoIncrement: true
+                remarks: "ID Пользователя"
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: name
+                type: VARCHAR(255)
+            - column:
+                name: age
+                type: INT
+
+
+

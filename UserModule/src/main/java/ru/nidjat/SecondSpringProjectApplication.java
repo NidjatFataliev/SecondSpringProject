@@ -1,0 +1,16 @@
+package ru.nidjat;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication(scanBasePackages = {
+		"com.ru.nidjat",
+		"ru.nidjat"
+})
+public class SecondSpringProjectApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SecondSpringProjectApplication.class, args);
+	}
+
+}

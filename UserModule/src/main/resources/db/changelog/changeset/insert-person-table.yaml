@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-initial-testpersons
+      author: Nidjat
+      changes:
+        - insert:
+            tableName: testpersons
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: "Ivan"
+              - column:
+                  name: age
+                  value: 33
+        - insert:
+            tableName: testpersons
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: "Fyodor"
+              - column:
+                  name: age
+                  value: 19
+

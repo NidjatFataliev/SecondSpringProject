@@ -1,0 +1,13 @@
+jwt:
+  secret: 24def97073278dcee1ce59f6a48d598eee8d28dfe2e5b2c1f440fa97507aef70
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+  hibernate:
+    ddl-auto: update

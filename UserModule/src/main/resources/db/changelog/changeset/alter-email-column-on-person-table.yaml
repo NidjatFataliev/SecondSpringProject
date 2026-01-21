@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_email_column_if_not_exists
+      author: nidjat
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - columnExists:
+                tableName: testpersons
+                columnName: email
+      changes:
+        - addColumn:
+            tableName: testpersons
+            columns:
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+      rollback:
+        - dropColumn:
+            tableName: testpersons
+            columnName: email
+    comment: "Add email column if it doesn't exist"
